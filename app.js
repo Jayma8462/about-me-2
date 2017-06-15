@@ -56,11 +56,10 @@ if (age.toUpperCase() === 'YES' || age.toUpperCase() === 'Y') {
   console.log('Question 3: Not a \"Yes\" or \"No\" answer.');
 }
 
-// var wife = prompt('Is my wife better than your wife?');
+var wife = prompt('Is my wife better than your wife?').toUpperCase();
 
-while (wife.toUpperCase() !== 'YES' || wife.toUpperCase() !== 'Y') {
-  wife = prompt('Is my wife better than your wife?');
-  if (wife.toUpperCase() === 'YES' || wife.toUpperCase() === 'Y') {
+while (wife !== 'YES' || wife !== 'Y') {
+  if (wife === 'YES' || wife === 'Y') {
     correct++;
     alert('Never forget what was said by you today.\n\n' + correct + ' of 7 correct.');
     console.log('correct: ' + correct);
@@ -68,9 +67,11 @@ while (wife.toUpperCase() !== 'YES' || wife.toUpperCase() !== 'Y') {
   } else if (wife.toUpperCase() === 'NO' || wife.toUpperCase() === 'N') {
     alert('You know what you have to say.\n\n\(I don\'t care if you don\'t have a wife\)');
     console.log('Question 4: More than one try.');
+    wife = prompt('Is my wife better than your wife?').toUpperCase();
   } else {
     alert('Seriously? \"Yes\" and \"No\" are not difficult words.');
     console.log('Question 4: Not a \"Yes\" or \"No\" answer.');
+    wife = prompt('Is my wife better than your wife?').toUpperCase();
   }
 }
 
